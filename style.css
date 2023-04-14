@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul, ol, li{
+    list-style: none;
+}
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(./img/fundo.jpg);
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    padding-left: 96px;
+    padding-right: 96px;
+}
+.Galeria{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+        "f1 f1 f1 f1 f1 f2 f2 f2 f3 f3 f3"
+        "f1 f1 f1 f1 f1 f4 f4 f4 f5 f5 f5"
+        "f6 f6 f6 f7 f7 f7 f7 f8 f8 f8 f8";
+    
+    gap: 12px;
+}
+.foto{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: purple;
+    background-position: center;
+    overflow: hidden;
+}
+.foto:nth-child(1){
+    grid-area: f1;
+    background-image: url(./img/corin.png);
+}
+.foto:nth-child(2){
+    grid-area: f2;
+    background-image: url(./img/13.jpg);
+}
+.foto:nth-child(3){
+    grid-area: f3;
+    background-image: url(./img/12.jpg);
+}
+.foto:nth-child(4){
+    grid-area: f4;
+    background-image: url(./img/c7361fb37118f5bcaf6b2ae70b034fbd.jpg);
+}
+.foto:nth-child(5){
+    grid-area: f5;
+    background-image: url(./img/gue10.jpg);
+}
+.foto:nth-child(6){
+    grid-area: f6;
+    background-image: url(./img/cassio.jpg);
+}
+.foto:nth-child(7){
+    grid-area: f7;
+    background-image: url(./img/16.jfif);
+}
+.foto:nth-child(8){
+    grid-area: f8;
+    background-image: url(./img/15.jpg);
+}
+.foto:hover > .foto__info{
+    transform: translateY(0%);
+}
+.foto__info{
+    position: absolute;
+    width: 100%;
+    height: 64px;
+    background-color: #0009;
+    color: white;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: 1s;
+}
